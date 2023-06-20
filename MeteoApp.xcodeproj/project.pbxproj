@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DB750E112A420E2C00E4B07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E102A420E2C00E4B07C /* AppDelegate.swift */; };
-		DB750E132A420E2C00E4B07C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E122A420E2C00E4B07C /* SceneDelegate.swift */; };
 		DB750E152A420E2C00E4B07C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E142A420E2C00E4B07C /* ViewController.swift */; };
 		DB750E182A420E2C00E4B07C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB750E162A420E2C00E4B07C /* Main.storyboard */; };
 		DB750E1B2A420E2C00E4B07C /* MeteoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB750E192A420E2C00E4B07C /* MeteoApp.xcdatamodeld */; };
@@ -17,6 +16,8 @@
 		DB750E2B2A420E3000E4B07C /* MeteoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E2A2A420E3000E4B07C /* MeteoAppTests.swift */; };
 		DB750E352A420E3000E4B07C /* MeteoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E342A420E3000E4B07C /* MeteoAppUITests.swift */; };
 		DB750E372A420E3000E4B07C /* MeteoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E362A420E3000E4B07C /* MeteoAppUITestsLaunchTests.swift */; };
+		DB750E452A4215B300E4B07C /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E442A4215B300E4B07C /* Dynamic.swift */; };
+		DB750E492A421DF900E4B07C /* MeteoAPI in Frameworks */ = {isa = PBXBuildFile; productRef = DB750E482A421DF900E4B07C /* MeteoAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,6 @@
 /* Begin PBXFileReference section */
 		DB750E0D2A420E2C00E4B07C /* MeteoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB750E102A420E2C00E4B07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB750E122A420E2C00E4B07C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DB750E142A420E2C00E4B07C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB750E172A420E2C00E4B07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB750E1A2A420E2C00E4B07C /* MeteoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeteoApp.xcdatamodel; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		DB750E302A420E3000E4B07C /* MeteoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeteoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB750E342A420E3000E4B07C /* MeteoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoAppUITests.swift; sourceTree = "<group>"; };
 		DB750E362A420E3000E4B07C /* MeteoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DB750E442A4215B300E4B07C /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		DB750E462A421D6D00E4B07C /* MeteoAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MeteoAPI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB750E492A421DF900E4B07C /* MeteoAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +87,9 @@
 				DB750E0F2A420E2C00E4B07C /* MeteoApp */,
 				DB750E292A420E3000E4B07C /* MeteoAppTests */,
 				DB750E332A420E3000E4B07C /* MeteoAppUITests */,
+				DB750E462A421D6D00E4B07C /* MeteoAPI */,
 				DB750E0E2A420E2C00E4B07C /* Products */,
+				DB750E472A421DF900E4B07C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				DB750E102A420E2C00E4B07C /* AppDelegate.swift */,
-				DB750E122A420E2C00E4B07C /* SceneDelegate.swift */,
 				DB750E142A420E2C00E4B07C /* ViewController.swift */,
+				DB750E432A42154D00E4B07C /* Bindings */,
 				DB750E162A420E2C00E4B07C /* Main.storyboard */,
 				DB750E1C2A420E2F00E4B07C /* Assets.xcassets */,
 				DB750E1E2A420E2F00E4B07C /* LaunchScreen.storyboard */,
@@ -130,6 +135,21 @@
 			path = MeteoAppUITests;
 			sourceTree = "<group>";
 		};
+		DB750E432A42154D00E4B07C /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				DB750E442A4215B300E4B07C /* Dynamic.swift */,
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
+		DB750E472A421DF900E4B07C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +166,9 @@
 			dependencies = (
 			);
 			name = MeteoApp;
+			packageProductDependencies = (
+				DB750E482A421DF900E4B07C /* MeteoAPI */,
+			);
 			productName = MeteoApp;
 			productReference = DB750E0D2A420E2C00E4B07C /* MeteoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -262,9 +285,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB750E1B2A420E2C00E4B07C /* MeteoApp.xcdatamodeld in Sources */,
+				DB750E452A4215B300E4B07C /* Dynamic.swift in Sources */,
 				DB750E152A420E2C00E4B07C /* ViewController.swift in Sources */,
 				DB750E112A420E2C00E4B07C /* AppDelegate.swift in Sources */,
-				DB750E132A420E2C00E4B07C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +625,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB750E482A421DF900E4B07C /* MeteoAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = MeteoAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DB750E192A420E2C00E4B07C /* MeteoApp.xcdatamodeld */ = {
