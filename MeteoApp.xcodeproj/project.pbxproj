@@ -18,6 +18,15 @@
 		DB750E372A420E3000E4B07C /* MeteoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E362A420E3000E4B07C /* MeteoAppUITestsLaunchTests.swift */; };
 		DB750E452A4215B300E4B07C /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E442A4215B300E4B07C /* Dynamic.swift */; };
 		DB750E492A421DF900E4B07C /* MeteoAPI in Frameworks */ = {isa = PBXBuildFile; productRef = DB750E482A421DF900E4B07C /* MeteoAPI */; };
+		DB750E4B2A42368C00E4B07C /* MeteoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E4A2A42368C00E4B07C /* MeteoService.swift */; };
+		DB750E4F2A42371600E4B07C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E4E2A42371600E4B07C /* Constants.swift */; };
+		DB750E582A4237D100E4B07C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E512A4237CF00E4B07C /* Weather.swift */; };
+		DB750E592A4237D100E4B07C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E522A4237D000E4B07C /* Location.swift */; };
+		DB750E5A2A4237D100E4B07C /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E532A4237D000E4B07C /* Wind.swift */; };
+		DB750E5B2A4237D100E4B07C /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E542A4237D000E4B07C /* Clouds.swift */; };
+		DB750E5C2A4237D100E4B07C /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E552A4237D000E4B07C /* WeatherDetails.swift */; };
+		DB750E5D2A4237D100E4B07C /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E562A4237D000E4B07C /* Sys.swift */; };
+		DB750E5E2A4237D100E4B07C /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E572A4237D100E4B07C /* Main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +62,15 @@
 		DB750E362A420E3000E4B07C /* MeteoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DB750E442A4215B300E4B07C /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		DB750E462A421D6D00E4B07C /* MeteoAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MeteoAPI; sourceTree = "<group>"; };
+		DB750E4A2A42368C00E4B07C /* MeteoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoService.swift; sourceTree = "<group>"; };
+		DB750E4E2A42371600E4B07C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB750E512A4237CF00E4B07C /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		DB750E522A4237D000E4B07C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DB750E532A4237D000E4B07C /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		DB750E542A4237D000E4B07C /* Clouds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
+		DB750E552A4237D000E4B07C /* WeatherDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
+		DB750E562A4237D000E4B07C /* Sys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
+		DB750E572A4237D100E4B07C /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +126,9 @@
 			children = (
 				DB750E102A420E2C00E4B07C /* AppDelegate.swift */,
 				DB750E142A420E2C00E4B07C /* ViewController.swift */,
+				DB750E502A42377000E4B07C /* Models */,
+				DB750E4D2A4236F000E4B07C /* Utils */,
+				DB750E4C2A42369900E4B07C /* Services */,
 				DB750E432A42154D00E4B07C /* Bindings */,
 				DB750E162A420E2C00E4B07C /* Main.storyboard */,
 				DB750E1C2A420E2F00E4B07C /* Assets.xcassets */,
@@ -148,6 +169,36 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB750E4C2A42369900E4B07C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DB750E4A2A42368C00E4B07C /* MeteoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DB750E4D2A4236F000E4B07C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DB750E4E2A42371600E4B07C /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DB750E502A42377000E4B07C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DB750E542A4237D000E4B07C /* Clouds.swift */,
+				DB750E522A4237D000E4B07C /* Location.swift */,
+				DB750E572A4237D100E4B07C /* Main.swift */,
+				DB750E562A4237D000E4B07C /* Sys.swift */,
+				DB750E512A4237CF00E4B07C /* Weather.swift */,
+				DB750E552A4237D000E4B07C /* WeatherDetails.swift */,
+				DB750E532A4237D000E4B07C /* Wind.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,10 +335,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB750E5C2A4237D100E4B07C /* WeatherDetails.swift in Sources */,
 				DB750E1B2A420E2C00E4B07C /* MeteoApp.xcdatamodeld in Sources */,
+				DB750E4B2A42368C00E4B07C /* MeteoService.swift in Sources */,
+				DB750E5A2A4237D100E4B07C /* Wind.swift in Sources */,
+				DB750E5E2A4237D100E4B07C /* Main.swift in Sources */,
+				DB750E592A4237D100E4B07C /* Location.swift in Sources */,
 				DB750E452A4215B300E4B07C /* Dynamic.swift in Sources */,
 				DB750E152A420E2C00E4B07C /* ViewController.swift in Sources */,
 				DB750E112A420E2C00E4B07C /* AppDelegate.swift in Sources */,
+				DB750E4F2A42371600E4B07C /* Constants.swift in Sources */,
+				DB750E582A4237D100E4B07C /* Weather.swift in Sources */,
+				DB750E5B2A4237D100E4B07C /* Clouds.swift in Sources */,
+				DB750E5D2A4237D100E4B07C /* Sys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
