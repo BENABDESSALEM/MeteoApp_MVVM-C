@@ -9,6 +9,7 @@ import Foundation
 import MeteoAPI
 
 class AddCityViewModel {
+    
     // MARK: Constants.
     let results: Bindable<[CityWeather]> = Bindable([])
     let error: Bindable<String?> = Bindable(nil)
@@ -17,17 +18,19 @@ class AddCityViewModel {
     let isCityAdded: Bindable<Bool> = Bindable(false)
     let kKelvinZeroInCelsius = 273.15
     let meteoApi: MeteoService!
+    
     // MARK: Proprety observer.
     var searchText: String? = "" {
         didSet {
             isButtonEnabled.value = isCharactersReached()
         }
     }
+    
     // MARK: Init.
     init(apiService:MeteoService) {
         self.meteoApi = apiService
     }
-    /**
+    /*
      Call the api service to fetch the weather for the specific city
      */
     func getCityWeather() {
@@ -48,9 +51,12 @@ class AddCityViewModel {
         }
     }
 }
+
 // MARK: Methods.
 extension AddCityViewModel {
-    /// Setup the displayed list of cities.
+    /*
+     Setup the displayed list of cities.
+     */
     func setupAddedCity(city:String,weather:Weather) {
         let temp = "\(self.toCelsius(kelvin: (weather.main?.temp) ?? 15))"
         let temp_min = "\(self.toCelsius(kelvin: (weather.main?.tempMin) ?? 15))"
@@ -63,11 +69,15 @@ extension AddCityViewModel {
         self.isCityAdded.value = true
         self.results.value.append(cityWeather)
     }
-    /// Converting the tempereture value to Celsius.
+    /*
+     Converting the tempereture value to Celsius.
+     */
     func toCelsius(kelvin: Double) -> Int {
         return Int(kelvin - kKelvinZeroInCelsius)
     }
-    /// Check the minimuim number of characters to start the search.
+    /*
+     Check the minimuim number of characters to start the search.
+     */
     func isCharactersReached() -> Bool {
         guard let searchText = searchText else { return false }
         return searchText.count >= 3
