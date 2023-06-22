@@ -62,8 +62,8 @@ public final class APIManager: ApiProtocol {
                 let decoder = JSONDecoder()
                 let jsonObj = try decoder.decode(T.self, from: data)
                 completion(ApiResult.success(jsonObj))
-            } catch let error {
-                completion(ApiResult.error(error))
+            } catch {
+                completion(ApiResult.error(ApiError.cityNotFound))
             }
         }.resume()
     }
