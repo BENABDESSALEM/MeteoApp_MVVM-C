@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DB750E112A420E2C00E4B07C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E102A420E2C00E4B07C /* AppDelegate.swift */; };
-		DB750E152A420E2C00E4B07C /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E142A420E2C00E4B07C /* AddCityViewController.swift */; };
-		DB750E182A420E2C00E4B07C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB750E162A420E2C00E4B07C /* Main.storyboard */; };
 		DB750E1B2A420E2C00E4B07C /* MeteoApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB750E192A420E2C00E4B07C /* MeteoApp.xcdatamodeld */; };
 		DB750E1D2A420E2F00E4B07C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB750E1C2A420E2F00E4B07C /* Assets.xcassets */; };
 		DB750E202A420E2F00E4B07C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB750E1E2A420E2F00E4B07C /* LaunchScreen.storyboard */; };
@@ -37,11 +35,12 @@
 		DB750E742A42F38900E4B07C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E732A42F38900E4B07C /* UIViewController+extension.swift */; };
 		DB750E762A42F58400E4B07C /* UIActivityIndicatorView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E752A42F58400E4B07C /* UIActivityIndicatorView+extension.swift */; };
 		DB750E782A42F86700E4B07C /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E772A42F86700E4B07C /* UIButton+extension.swift */; };
-		DB750E7A2A42FA1500E4B07C /* UITextField+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E792A42FA1500E4B07C /* UITextField+extension.swift */; };
 		DBF295C52A434957009C77A1 /* CityCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C42A434957009C77A1 /* CityCellViewModel.swift */; };
 		DBF295C72A434AAF009C77A1 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C62A434AAF009C77A1 /* UILabel+extension.swift */; };
 		DBF295C92A434C88009C77A1 /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C82A434C88009C77A1 /* CityWeather.swift */; };
 		DBF295CB2A446223009C77A1 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295CA2A446223009C77A1 /* UIImageView+extension.swift */; };
+		DBF295D92A447585009C77A1 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295D72A447585009C77A1 /* AddCityViewController.swift */; };
+		DBF295DA2A447585009C77A1 /* AddCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF295D82A447585009C77A1 /* AddCityViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +63,6 @@
 /* Begin PBXFileReference section */
 		DB750E0D2A420E2C00E4B07C /* MeteoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeteoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB750E102A420E2C00E4B07C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB750E142A420E2C00E4B07C /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
-		DB750E172A420E2C00E4B07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB750E1A2A420E2C00E4B07C /* MeteoApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MeteoApp.xcdatamodel; sourceTree = "<group>"; };
 		DB750E1C2A420E2F00E4B07C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB750E1F2A420E2F00E4B07C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,11 +93,12 @@
 		DB750E732A42F38900E4B07C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		DB750E752A42F58400E4B07C /* UIActivityIndicatorView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+extension.swift"; sourceTree = "<group>"; };
 		DB750E772A42F86700E4B07C /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
-		DB750E792A42FA1500E4B07C /* UITextField+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+extension.swift"; sourceTree = "<group>"; };
 		DBF295C42A434957009C77A1 /* CityCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellViewModel.swift; sourceTree = "<group>"; };
 		DBF295C62A434AAF009C77A1 /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
 		DBF295C82A434C88009C77A1 /* CityWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
 		DBF295CA2A446223009C77A1 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		DBF295D72A447585009C77A1 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddCityViewController.swift; path = ../../../../../../../.Trash/MeteoApp/MeteoApp/MVVM/Views/AddCity/AddCityViewController.swift; sourceTree = "<group>"; };
+		DBF295D82A447585009C77A1 /* AddCityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AddCityViewController.xib; path = ../../../../../../../.Trash/MeteoApp/MeteoApp/MVVM/Views/AddCity/AddCityViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +158,6 @@
 				DB750E4C2A42369900E4B07C /* Services */,
 				DB750E432A42154D00E4B07C /* Bindings */,
 				DB750E6B2A4244FB00E4B07C /* Extensions */,
-				DB750E162A420E2C00E4B07C /* Main.storyboard */,
 				DB750E1C2A420E2F00E4B07C /* Assets.xcassets */,
 				DB750E1E2A420E2F00E4B07C /* LaunchScreen.storyboard */,
 				DB750E212A420E2F00E4B07C /* Info.plist */,
@@ -265,7 +262,8 @@
 		DB750E622A4239D600E4B07C /* AddCity */ = {
 			isa = PBXGroup;
 			children = (
-				DB750E142A420E2C00E4B07C /* AddCityViewController.swift */,
+				DBF295D72A447585009C77A1 /* AddCityViewController.swift */,
+				DBF295D82A447585009C77A1 /* AddCityViewController.xib */,
 			);
 			path = AddCity;
 			sourceTree = "<group>";
@@ -278,7 +276,6 @@
 				DB750E752A42F58400E4B07C /* UIActivityIndicatorView+extension.swift */,
 				DB750E6F2A42F10800E4B07C /* UIView+extension.swift */,
 				DB750E732A42F38900E4B07C /* UIViewController+extension.swift */,
-				DB750E792A42FA1500E4B07C /* UITextField+extension.swift */,
 				DBF295C62A434AAF009C77A1 /* UILabel+extension.swift */,
 				DBF295CA2A446223009C77A1 /* UIImageView+extension.swift */,
 			);
@@ -401,10 +398,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF295DA2A447585009C77A1 /* AddCityViewController.xib in Resources */,
 				DB750E202A420E2F00E4B07C /* LaunchScreen.storyboard in Resources */,
 				DB750E1D2A420E2F00E4B07C /* Assets.xcassets in Resources */,
 				DB750E6A2A42417E00E4B07C /* CityTableViewCell.xib in Resources */,
-				DB750E182A420E2C00E4B07C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,14 +436,13 @@
 				DB750E5E2A4237D100E4B07C /* Main.swift in Sources */,
 				DB750E592A4237D100E4B07C /* Location.swift in Sources */,
 				DB750E452A4215B300E4B07C /* Bindable.swift in Sources */,
-				DB750E152A420E2C00E4B07C /* AddCityViewController.swift in Sources */,
 				DBF295C92A434C88009C77A1 /* CityWeather.swift in Sources */,
 				DB750E112A420E2C00E4B07C /* AppDelegate.swift in Sources */,
 				DB750E4F2A42371600E4B07C /* Constants.swift in Sources */,
 				DB750E782A42F86700E4B07C /* UIButton+extension.swift in Sources */,
 				DB750E742A42F38900E4B07C /* UIViewController+extension.swift in Sources */,
 				DB750E722A42F2DE00E4B07C /* Colors.swift in Sources */,
-				DB750E7A2A42FA1500E4B07C /* UITextField+extension.swift in Sources */,
+				DBF295D92A447585009C77A1 /* AddCityViewController.swift in Sources */,
 				DB750E702A42F10800E4B07C /* UIView+extension.swift in Sources */,
 				DBF295CB2A446223009C77A1 /* UIImageView+extension.swift in Sources */,
 				DB750E582A4237D100E4B07C /* Weather.swift in Sources */,
@@ -492,14 +488,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB750E162A420E2C00E4B07C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB750E172A420E2C00E4B07C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB750E1E2A420E2F00E4B07C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -636,7 +624,6 @@
 				INFOPLIST_FILE = MeteoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -664,7 +651,6 @@
 				INFOPLIST_FILE = MeteoApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
