@@ -43,6 +43,8 @@
 		DBF295DE2A44902B009C77A1 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295DC2A44902B009C77A1 /* CitiesViewController.swift */; };
 		DBF295DF2A44902B009C77A1 /* CitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF295DD2A44902B009C77A1 /* CitiesViewController.xib */; };
 		DBF295E12A4493E8009C77A1 /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295E02A4493E8009C77A1 /* CitiesViewModel.swift */; };
+		DBF295E42A44EC99009C77A1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295E32A44EC99009C77A1 /* AppCoordinator.swift */; };
+		DBF295E62A44ECC9009C77A1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295E52A44ECC9009C77A1 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		DBF295DC2A44902B009C77A1 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CitiesViewController.swift; path = ../../../../../../../CitiesViewController.swift; sourceTree = "<group>"; };
 		DBF295DD2A44902B009C77A1 /* CitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CitiesViewController.xib; path = ../../../../../../../CitiesViewController.xib; sourceTree = "<group>"; };
 		DBF295E02A4493E8009C77A1 /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CitiesViewModel.swift; path = ../../../../../../.Trash/MeteoApp/MeteoApp/MVVM/ViewModels/CitiesViewModel.swift; sourceTree = "<group>"; };
+		DBF295E32A44EC99009C77A1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DBF295E52A44ECC9009C77A1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				DB750E102A420E2C00E4B07C /* AppDelegate.swift */,
-				DB750E5F2A42391C00E4B07C /* MVVM */,
+				DB750E5F2A42391C00E4B07C /* MVVM-C */,
 				DB750E4D2A4236F000E4B07C /* Utils */,
 				DB750E4C2A42369900E4B07C /* Services */,
 				DB750E432A42154D00E4B07C /* Bindings */,
@@ -234,14 +238,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		DB750E5F2A42391C00E4B07C /* MVVM */ = {
+		DB750E5F2A42391C00E4B07C /* MVVM-C */ = {
 			isa = PBXGroup;
 			children = (
+				DBF295E22A44EC57009C77A1 /* Coordinators */,
 				DB750E502A42377000E4B07C /* Models */,
 				DB750E602A42393E00E4B07C /* Views */,
 				DB750E612A42394F00E4B07C /* ViewModels */,
 			);
-			path = MVVM;
+			path = "MVVM-C";
 			sourceTree = "<group>";
 		};
 		DB750E602A42393E00E4B07C /* Views */ = {
@@ -303,6 +308,15 @@
 				DBF295DD2A44902B009C77A1 /* CitiesViewController.xib */,
 			);
 			path = Cities;
+			sourceTree = "<group>";
+		};
+		DBF295E22A44EC57009C77A1 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DBF295E32A44EC99009C77A1 /* AppCoordinator.swift */,
+				DBF295E52A44ECC9009C77A1 /* Coordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,8 +473,10 @@
 				DB750E782A42F86700E4B07C /* UIButton+extension.swift in Sources */,
 				DB750E742A42F38900E4B07C /* UIViewController+extension.swift in Sources */,
 				DB750E722A42F2DE00E4B07C /* Colors.swift in Sources */,
+				DBF295E62A44ECC9009C77A1 /* Coordinator.swift in Sources */,
 				DBF295D92A447585009C77A1 /* AddCityViewController.swift in Sources */,
 				DB750E702A42F10800E4B07C /* UIView+extension.swift in Sources */,
+				DBF295E42A44EC99009C77A1 /* AppCoordinator.swift in Sources */,
 				DBF295CB2A446223009C77A1 /* UIImageView+extension.swift in Sources */,
 				DB750E582A4237D100E4B07C /* Weather.swift in Sources */,
 				DBF295C52A434957009C77A1 /* CityCellViewModel.swift in Sources */,

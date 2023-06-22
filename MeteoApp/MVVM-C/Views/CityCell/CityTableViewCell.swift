@@ -53,5 +53,6 @@ class CityTableViewCell: UITableViewCell {
         containerView.setBackgroundGradient(gradientLayer: gradientLayer, colors: buttonColors, isVertical: false)
         containerView.layer.cornerRadius = 20
         containerView.layer.masksToBounds = true
+        self.selectionStyle = .none
     }
 }
