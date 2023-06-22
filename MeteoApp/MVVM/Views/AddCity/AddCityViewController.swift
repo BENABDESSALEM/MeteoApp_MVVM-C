@@ -8,7 +8,7 @@
 import UIKit
 
 class AddCityViewController: UIViewController {
-
+    // MARK: Outlets.
     @IBOutlet weak var addCityTableView: UITableView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var containerSearchView: UIView!
@@ -33,7 +33,7 @@ class AddCityViewController: UIViewController {
     // MARK: IBActions.
     
     @IBAction func searchButtonPressed(_ sender: Any) {
-        viewModel.searchCity()
+        viewModel.getCityWeather()
     }
 }
 
@@ -58,7 +58,7 @@ extension AddCityViewController {
         searchButton.setCornerRadius(radius: 22)
         searchButton.addBorder(width: 1, color: .white)
         hideKeyboardWhenTappedAround()
-        setBackgroundGradient(gradientLayer:gradientLayer,colors: appColors, isVertical: true)
+        view.setBackgroundGradient(gradientLayer:gradientLayer,colors: appColors, isVertical: true)
     }
 }
 
@@ -72,10 +72,10 @@ extension AddCityViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let item = viewModel.getSearchResultVM(at: indexPath.row)
+            let city = viewModel.results.value[indexPath.row]
             let cell:CityTableViewCell = tableView.dequeueCell(withType: CityTableViewCell.self)
             cell.containerView.layer.cornerRadius = 10
-            cell.cityName.text = item.trackName
+            cell.setupWith(city:city)
             cell.selectionStyle = .none
             return cell
     }
@@ -84,12 +84,8 @@ extension AddCityViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate.
 
 extension AddCityViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
- 
-    }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
+        return 95
     }
 }
 
@@ -97,11 +93,10 @@ extension AddCityViewController: UITableViewDelegate {
 
 extension AddCityViewController:UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        viewModel.searchCity()
+        viewModel.getCityWeather()
         textField.resignFirstResponder()
         return true
     }
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = textField.text {
             if text.count >= 3 {
