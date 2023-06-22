@@ -41,6 +41,7 @@
 		DBF295C52A434957009C77A1 /* CityCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C42A434957009C77A1 /* CityCellViewModel.swift */; };
 		DBF295C72A434AAF009C77A1 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C62A434AAF009C77A1 /* UILabel+extension.swift */; };
 		DBF295C92A434C88009C77A1 /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C82A434C88009C77A1 /* CityWeather.swift */; };
+		DBF295CB2A446223009C77A1 /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295CA2A446223009C77A1 /* UIImageView+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		DBF295C42A434957009C77A1 /* CityCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellViewModel.swift; sourceTree = "<group>"; };
 		DBF295C62A434AAF009C77A1 /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
 		DBF295C82A434C88009C77A1 /* CityWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
+		DBF295CA2A446223009C77A1 /* UIImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				DB750E732A42F38900E4B07C /* UIViewController+extension.swift */,
 				DB750E792A42FA1500E4B07C /* UITextField+extension.swift */,
 				DBF295C62A434AAF009C77A1 /* UILabel+extension.swift */,
+				DBF295CA2A446223009C77A1 /* UIImageView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				DB750E722A42F2DE00E4B07C /* Colors.swift in Sources */,
 				DB750E7A2A42FA1500E4B07C /* UITextField+extension.swift in Sources */,
 				DB750E702A42F10800E4B07C /* UIView+extension.swift in Sources */,
+				DBF295CB2A446223009C77A1 /* UIImageView+extension.swift in Sources */,
 				DB750E582A4237D100E4B07C /* Weather.swift in Sources */,
 				DBF295C52A434957009C77A1 /* CityCellViewModel.swift in Sources */,
 				DBF295C72A434AAF009C77A1 /* UILabel+extension.swift in Sources */,

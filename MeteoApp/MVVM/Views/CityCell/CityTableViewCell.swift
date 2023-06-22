@@ -8,21 +8,33 @@
 import UIKit
 
 class CityTableViewCell: UITableViewCell {
-    
+    // MARK: Outlets.
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cityName: UILabel!
     @IBOutlet weak var meteoImgView: UIImageView!
     @IBOutlet weak var forwardImgView: UIImageView!
     @IBOutlet weak var detailsLabel: UILabel!
-    
-    var viewModel: CityCellViewModel!
+    // MARK: Variable.
+    var gradientLayer = CAGradientLayer()
+    // MARK: Property observer.
+    var viewModel: CityCellViewModel! {
+        didSet {
+            setupBindings()
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupViews()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = contentView.bounds
     }
     
     func setupWith(city:CityWeather) {
@@ -31,5 +43,12 @@ class CityTableViewCell: UITableViewCell {
     
     func setupBindings() {
         cityName.bindTo(viewModel.cityName)
+        meteoImgView.bindTo(viewModel.pictoImage)
+    }
+    
+    func setupViews() {
+        containerView.setBackgroundGradient(gradientLayer: gradientLayer, colors: buttonColors, isVertical: false)
+        containerView.layer.cornerRadius = 20
+        containerView.layer.masksToBounds = true
     }
 }
