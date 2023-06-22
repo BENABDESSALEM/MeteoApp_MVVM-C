@@ -22,4 +22,16 @@ extension UILabel {
             self?.text = text
         }
     }
+    /// Bind a UILabel in order to hide/show according to boolean value
+    ///
+    /// Example:
+    /// ```
+    /// alertLabel.bindTo(viewModel.isDataReady)
+    /// ```
+    /// - Parameter bindable: the bounded property
+    func bindTo(_ bindable: Bindable<Bool>) {
+        bindable.bind { [weak self] isDataReady in
+           self?.isHidden = !isDataReady
+        }
+    }
 }
