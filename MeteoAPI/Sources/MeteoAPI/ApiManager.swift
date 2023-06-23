@@ -1,3 +1,10 @@
+//
+//  ApiResult.swift
+//
+//
+//  Created by Wajih Benabdessalem on 6/20/23.
+//
+
 import Foundation
 
 public final class APIManager: ApiProtocol {
@@ -62,8 +69,8 @@ public final class APIManager: ApiProtocol {
                 let decoder = JSONDecoder()
                 let jsonObj = try decoder.decode(T.self, from: data)
                 completion(ApiResult.success(jsonObj))
-            } catch {
-                completion(ApiResult.error(ApiError.cityNotFound))
+            } catch let error {
+                completion(ApiResult.error(error))
             }
         }.resume()
     }
