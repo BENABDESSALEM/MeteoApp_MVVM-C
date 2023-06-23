@@ -40,8 +40,8 @@ class CityTableViewCell: UITableViewCell {
         gradientLayer.frame = contentView.bounds
     }
     
-    func setupWith(city:CityWeather) {
-        self.viewModel = CityCellViewModel(city: city)
+    func setupWith(viewModel:CityCellViewModel) {
+        self.viewModel = viewModel
     }
     
     func setupBindings() {
