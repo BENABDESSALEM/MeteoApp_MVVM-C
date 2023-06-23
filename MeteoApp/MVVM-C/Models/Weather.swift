@@ -20,3 +20,32 @@ public struct Weather: Codable {
     public let clouds: Clouds?
     public let main: Main?
 }
+
+extension Weather {
+ 
+    var temp:String {
+        return "\(self.toCelsius(kelvin: (self.main?.temp) ?? 15))"
+    }
+    var temp_min:String {
+        return "\(self.toCelsius(kelvin: (self.main?.tempMin) ?? 15))"
+    }
+    var temp_max:String {
+        return "\(self.toCelsius(kelvin: (self.main?.tempMax) ?? 15))"
+    }
+    var customName:String {
+        return (self.name ?? "") + ", " + (self.sys?.country ?? "")
+    }
+    var status:String {
+        return self.weather?.first?.description ?? ""
+    }
+    var tempMinMax:String {
+        return "H\(temp_max)°, L\(temp_min)°"
+    }
+    var image:String {
+        return self.weather?.first?.icon ?? "02d"
+    }
+    
+    func toCelsius(kelvin: Double) -> Int {
+        return Int(kelvin - 273.15)
+    }
+}

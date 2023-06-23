@@ -44,7 +44,7 @@ class AddCityViewModel {
             self.isLoadingEnabled.value = false
             switch result {
             case .success(let weather):
-                self.setupAddedCity(city: searchedCity, weather:weather)
+                self.setupAddedCity(weather:weather)
             case .error(_):
                 self.error.value = "*** ERROR ***"
             }
@@ -57,15 +57,8 @@ extension AddCityViewModel {
     /*
      Setup the displayed list of cities.
      */
-    func setupAddedCity(city:String,weather:Weather) {
-        let temp = "\(self.toCelsius(kelvin: (weather.main?.temp) ?? 15))"
-        let temp_min = "\(self.toCelsius(kelvin: (weather.main?.tempMin) ?? 15))"
-        let temp_max = "\(self.toCelsius(kelvin: (weather.main?.tempMax) ?? 15))"
-        let name = (weather.name ?? "") + ", " + (weather.sys?.country ?? "")
-        let tempMinMax = "H\(temp_max)°, L\(temp_min)°"
-        let status = weather.weather?.first?.description
-        let image = weather.weather?.first?.icon
-        let cityWeather = CityWeather(temp: temp, tempMinMax: tempMinMax, city: name, status: status, image: image)
+    func setupAddedCity(weather:Weather) {
+        let cityWeather = CityWeather(temp: weather.temp, tempMinMax: weather.tempMinMax, city: weather.customName, status: weather.status, image: weather.image)
         self.isCityAdded.value = true
         self.results.value = [cityWeather]
     }
