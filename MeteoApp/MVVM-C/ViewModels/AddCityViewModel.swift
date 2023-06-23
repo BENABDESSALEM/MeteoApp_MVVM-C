@@ -67,7 +67,7 @@ extension AddCityViewModel {
         let image = weather.weather?.first?.icon
         let cityWeather = CityWeather(temp: temp, tempMinMax: tempMinMax, city: name, status: status, image: image)
         self.isCityAdded.value = true
-        self.results.value.append(cityWeather)
+        self.results.value = [cityWeather]
     }
     /*
      Converting the tempereture value to Celsius.
