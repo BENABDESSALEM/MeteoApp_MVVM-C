@@ -35,6 +35,12 @@ class AppCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
     
+    func showCities(city:CityWeather) {
+        let citiesVC = navigationController.viewControllers.filter { $0 is CitiesViewController }.first! as? CitiesViewController
+        citiesVC?.viewModel.citiesList.value.append(city)
+        navigationController.popToViewController(citiesVC!, animated: true)
+    }
+    
     func showDetail() {
 
     }
