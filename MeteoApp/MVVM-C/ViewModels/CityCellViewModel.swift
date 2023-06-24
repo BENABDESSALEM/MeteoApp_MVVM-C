@@ -15,6 +15,15 @@ final class CityCellViewModel {
     let cityName: Bindable<String?> = Bindable("")
     let status: Bindable<String?> = Bindable("")
     let pictoImage: Bindable<String?> = Bindable("")
+    let imageIndicator: Bindable<String?> = Bindable("")
+    let messageIndicator: Bindable<String?> = Bindable("")
+
+    var isAddCity:Bool = false {
+        didSet {
+            messageIndicator.value = isAddCity ? "Ajouter" : "Détails météo"
+            imageIndicator.value = isAddCity ? "plusIcon" : "chevronsForward"
+        }
+    }
     
     init(city:CityWeather) {
         temperature.value = city.temp
