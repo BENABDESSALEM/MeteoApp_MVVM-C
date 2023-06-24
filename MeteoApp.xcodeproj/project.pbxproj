@@ -313,8 +313,8 @@
 		DBF295E22A44EC57009C77A1 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				DBF295E32A44EC99009C77A1 /* AppCoordinator.swift */,
 				DBF295E52A44ECC9009C77A1 /* Coordinator.swift */,
+				DBF295E32A44EC99009C77A1 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";

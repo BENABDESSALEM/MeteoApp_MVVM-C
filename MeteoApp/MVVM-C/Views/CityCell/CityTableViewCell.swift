@@ -46,13 +46,14 @@ class CityTableViewCell: UITableViewCell {
     
     func setupBindings() {
         cityName.bindTo(viewModel.cityName)
-        meteoImgView.bindTo(viewModel.pictoImage)
+        forwardImgView.bindTo(viewModel.imageIndicator)
+        detailsLabel.bindTo(viewModel.messageIndicator)
     }
     
     func setupViews() {
         containerView.setBackgroundGradient(gradientLayer: gradientLayer, colors: buttonColors, isVertical: false)
         containerView.layer.cornerRadius = 20
         containerView.layer.masksToBounds = true
-        self.selectionStyle = .none
+        selectionStyle = .none
     }
 }
