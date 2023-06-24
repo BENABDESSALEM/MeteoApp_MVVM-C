@@ -31,7 +31,7 @@ extension UILabel {
     /// - Parameter bindable: the bounded property
     func bindTo(_ bindable: Bindable<Bool>) {
         bindable.bind { [weak self] isDataReady in
-           self?.isHidden = !isDataReady
+           self?.isHidden = isDataReady
         }
     }
 }

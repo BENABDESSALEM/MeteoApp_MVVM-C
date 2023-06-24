@@ -36,7 +36,6 @@ extension UITableView {
      - Parameter type: UITableViewCell.Type
      */
     func dequeueCell<T: UITableViewCell>(withType type: UITableViewCell.Type) -> T {
-        let cellId = String(describing: type)
-        return dequeueReusableCell(withIdentifier: cellId) as! T
+        return dequeueReusableCell(withIdentifier: String(describing: type)) as! T
     }
 }
