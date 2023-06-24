@@ -14,7 +14,6 @@ final class CityCellViewModel {
     let tempMinMax: Bindable<String?> = Bindable("")
     let cityName: Bindable<String?> = Bindable("")
     let status: Bindable<String?> = Bindable("")
-    let pictoImage: Bindable<String?> = Bindable("")
     let imageIndicator: Bindable<String?> = Bindable("")
     let messageIndicator: Bindable<String?> = Bindable("")
 
@@ -30,6 +29,5 @@ final class CityCellViewModel {
         tempMinMax.value = city.tempMinMax
         cityName.value = city.city
         status.value = city.status
-        pictoImage.value = city.image
     }
 }

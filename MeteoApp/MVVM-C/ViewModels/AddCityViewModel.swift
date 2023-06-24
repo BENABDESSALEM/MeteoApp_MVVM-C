@@ -8,7 +8,7 @@
 import Foundation
 import MeteoAPI
 
-class AddCityViewModel {
+final class AddCityViewModel {
     
     // MARK: Constants.
     let results: Bindable<[CityWeather]> = Bindable([])

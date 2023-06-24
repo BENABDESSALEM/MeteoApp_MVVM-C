@@ -45,6 +45,9 @@
 		DBF295E12A4493E8009C77A1 /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295E02A4493E8009C77A1 /* CitiesViewModel.swift */; };
 		DBF295E42A44EC99009C77A1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295E32A44EC99009C77A1 /* AppCoordinator.swift */; };
 		DBF295E62A44ECC9009C77A1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295E52A44ECC9009C77A1 /* Coordinator.swift */; };
+		DBF295ED2A46FC56009C77A1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295EB2A46FC56009C77A1 /* DetailsViewController.swift */; };
+		DBF295EE2A46FC56009C77A1 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF295EC2A46FC56009C77A1 /* DetailsViewController.xib */; };
+		DBF295F02A46FCFB009C77A1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295EF2A46FCFB009C77A1 /* DetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,9 @@
 		DBF295E02A4493E8009C77A1 /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CitiesViewModel.swift; path = ../../../../../../.Trash/MeteoApp/MeteoApp/MVVM/ViewModels/CitiesViewModel.swift; sourceTree = "<group>"; };
 		DBF295E32A44EC99009C77A1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DBF295E52A44ECC9009C77A1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DBF295EB2A46FC56009C77A1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		DBF295EC2A46FC56009C77A1 /* DetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		DBF295EF2A46FCFB009C77A1 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +258,7 @@
 		DB750E602A42393E00E4B07C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBF295EA2A46FB82009C77A1 /* DetailsCityWeather */,
 				DBF295DB2A448FDE009C77A1 /* Cities */,
 				DB750E622A4239D600E4B07C /* AddCity */,
 				DB750E6E2A42F0C200E4B07C /* CityCell */,
@@ -265,6 +272,7 @@
 				DB750E632A423AAD00E4B07C /* AddCityViewModel.swift */,
 				DBF295E02A4493E8009C77A1 /* CitiesViewModel.swift */,
 				DBF295C42A434957009C77A1 /* CityCellViewModel.swift */,
+				DBF295EF2A46FCFB009C77A1 /* DetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -317,6 +325,15 @@
 				DBF295E32A44EC99009C77A1 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DBF295EA2A46FB82009C77A1 /* DetailsCityWeather */ = {
+			isa = PBXGroup;
+			children = (
+				DBF295EB2A46FC56009C77A1 /* DetailsViewController.swift */,
+				DBF295EC2A46FC56009C77A1 /* DetailsViewController.xib */,
+			);
+			path = DetailsCityWeather;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +448,7 @@
 				DB750E1D2A420E2F00E4B07C /* Assets.xcassets in Resources */,
 				DB750E6A2A42417E00E4B07C /* CityTableViewCell.xib in Resources */,
 				DBF295DF2A44902B009C77A1 /* CitiesViewController.xib in Resources */,
+				DBF295EE2A46FC56009C77A1 /* DetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +501,9 @@
 				DBF295C72A434AAF009C77A1 /* UILabel+extension.swift in Sources */,
 				DB750E5B2A4237D100E4B07C /* Clouds.swift in Sources */,
 				DB750E5D2A4237D100E4B07C /* Sys.swift in Sources */,
+				DBF295F02A46FCFB009C77A1 /* DetailsViewModel.swift in Sources */,
 				DB750E642A423AAD00E4B07C /* AddCityViewModel.swift in Sources */,
+				DBF295ED2A46FC56009C77A1 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

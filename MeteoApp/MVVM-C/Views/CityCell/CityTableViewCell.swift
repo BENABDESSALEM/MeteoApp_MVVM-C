@@ -7,12 +7,11 @@
 
 import UIKit
 
-class CityTableViewCell: UITableViewCell {
+final class CityTableViewCell: UITableViewCell {
     
     // MARK: Outlets.
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cityName: UILabel!
-    @IBOutlet weak var meteoImgView: UIImageView!
     @IBOutlet weak var forwardImgView: UIImageView!
     @IBOutlet weak var detailsLabel: UILabel!
     
