@@ -15,7 +15,7 @@ final class AddCityViewModel {
     let error: Bindable<String?> = Bindable(nil)
     let isButtonEnabled: Bindable<Bool> = Bindable(false)
     let isLoadingEnabled: Bindable<Bool> = Bindable(false)
-    let isCityAdded: Bindable<Bool> = Bindable(false)
+    let showAlert: Bindable<Bool> = Bindable(false)
     let meteoApi: MeteoService!
     
     // MARK: Proprety observer.
@@ -35,7 +35,7 @@ final class AddCityViewModel {
     func getCityWeather() {
         guard let city = searchText else { return }
         self.isLoadingEnabled.value = true
-        self.isCityAdded.value = false
+        self.showAlert.value = true
         meteoApi.getCityByName(name: city) { result in
             self.isLoadingEnabled.value = false
             switch result {
@@ -55,7 +55,7 @@ extension AddCityViewModel {
      */
     func setupAddedCity(weather:Weather) {
         let cityWeather = CityWeather(temp: weather.temp, tempMinMax: weather.tempMinMax, city: weather.customName, status: weather.status, image: weather.image)
-        self.isCityAdded.value = true
+        self.showAlert.value = false
         self.results.value = [cityWeather]
     }
     /*

@@ -17,13 +17,15 @@ final class CityCellViewModel {
     let imageIndicator: Bindable<String?> = Bindable("")
     let messageIndicator: Bindable<String?> = Bindable("")
 
+    // MARK: Proprety observer.
     var isAddCity:Bool = false {
         didSet {
-            messageIndicator.value = isAddCity ? "Ajouter" : "Détails météo"
+            messageIndicator.value = isAddCity ? "Add" : "Weather details"
             imageIndicator.value = isAddCity ? "plusIcon" : "chevronsForward"
         }
     }
-    
+   
+    // MARK: Initialisation.
     init(city:CityWeather) {
         temperature.value = city.temp
         tempMinMax.value = city.tempMinMax
