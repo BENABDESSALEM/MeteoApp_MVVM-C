@@ -16,7 +16,6 @@ class AddCityViewModel {
     let isButtonEnabled: Bindable<Bool> = Bindable(false)
     let isLoadingEnabled: Bindable<Bool> = Bindable(false)
     let isCityAdded: Bindable<Bool> = Bindable(false)
-    let kKelvinZeroInCelsius = 273.15
     let meteoApi: MeteoService!
     
     // MARK: Proprety observer.
@@ -34,13 +33,10 @@ class AddCityViewModel {
      Call the api service to fetch the weather for the specific city
      */
     func getCityWeather() {
-        guard let text = searchText else { return }
-        let searchedCity = text.addingPercentEncoding(
-            withAllowedCharacters: .urlHostAllowed
-        ) ?? ""
+        guard let city = searchText else { return }
         self.isLoadingEnabled.value = true
         self.isCityAdded.value = false
-        meteoApi.getCityByName(name: searchedCity) { result in
+        meteoApi.getCityByName(name: city) { result in
             self.isLoadingEnabled.value = false
             switch result {
             case .success(let weather):
@@ -61,12 +57,6 @@ extension AddCityViewModel {
         let cityWeather = CityWeather(temp: weather.temp, tempMinMax: weather.tempMinMax, city: weather.customName, status: weather.status, image: weather.image)
         self.isCityAdded.value = true
         self.results.value = [cityWeather]
-    }
-    /*
-     Converting the tempereture value to Celsius.
-     */
-    func toCelsius(kelvin: Double) -> Int {
-        return Int(kelvin - kKelvinZeroInCelsius)
     }
     /*
      Check the minimuim number of characters to start the search.
