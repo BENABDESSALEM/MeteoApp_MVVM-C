@@ -18,6 +18,13 @@ class WeekCollectionViewCell: UICollectionViewCell {
     // MARK: Variable.
     var gradientLayer = CAGradientLayer()
     
+    // MARK: Property observer.
+    var viewModel: WeekCellViewModel! {
+        didSet {
+            setupBindings()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupViews()
@@ -29,11 +36,13 @@ class WeekCollectionViewCell: UICollectionViewCell {
     }
     
     func setupWith(viewModel:WeekCellViewModel) {
-
+        self.viewModel = viewModel
     }
     
     func setupBindings() {
-
+        dayLabel.bindTo(viewModel.dayName)
+        weatherImgView.bindTo(viewModel.weatherImage)
+        tempLabel.bindTo(viewModel.temp)
     }
     
     func setupViews() {
