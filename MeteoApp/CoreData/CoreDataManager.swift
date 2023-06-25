@@ -33,8 +33,21 @@ class CoreDataManager {
         }
     }
     
-    func saveCity(weather:CityWeather) {
-        let city = SCityWeather(context: context)
+    func saveAndUpdateCity(weather:CityWeather) {
+        let city: SCityWeather!
+        /*
+         Before saving the data we will check if the city already exist:
+            - IF true : so we will update the model
+            - if false: so the city no saved ans is new so we will add it.
+         */
+        let fetchCity: NSFetchRequest<SCityWeather> = SCityWeather.fetchRequest()
+        fetchCity.predicate = NSPredicate(format: "name = %@", (weather.city ?? "") as String)
+        let results = try? context.fetch(fetchCity)
+        if results?.count == 0 {
+           city = SCityWeather(context: context)
+        } else {
+           city = results?.first
+        }
         city.name = weather.city
         city.country = weather.country
         if let list = weather.list {
