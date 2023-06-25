@@ -67,6 +67,7 @@ extension DetailsViewController {
      Setup bindings.
      */
     func setupBindings() {
+        weatherCollectionView.bindTo(viewModel.weatherList)
         cityNameLabel.bindTo(viewModel.cityName)
         tempLabel.bindTo(viewModel.temp)
         statusLabel.bindTo(viewModel.description)
@@ -80,10 +81,13 @@ extension DetailsViewController {
 
 extension DetailsViewController:UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return viewModel.weatherList.value.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell:WeekCollectionViewCell = collectionView.dequeueCell(for: indexPath)
+        let item = viewModel.weatherList.value[indexPath.row]
+        let vm = WeekCellViewModel(item: item)
+        cell.setupWith(viewModel: vm)
         return cell
     }
 }
@@ -91,7 +95,10 @@ extension DetailsViewController:UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate.
 
 extension DetailsViewController:UICollectionViewDelegate {
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let dayWeather = viewModel.weatherList.value[indexPath.row]
+        viewModel.weather = dayWeather
+    }
 }
 
 // MARK: UICollectionViewDelegateFlowLayout.
