@@ -15,7 +15,7 @@ final class WeekCellViewModel {
     let weatherImage: Bindable<String?> = Bindable("")
 
     // MARK: Initialisation.
-    init(item:WeatherItem) {
+    init(item:SWeatherItem) {
         let formatter = DateFormatter()
         formatter.dateFormat  = "EE"
         formatter.locale = Locale(identifier: "en_US")
