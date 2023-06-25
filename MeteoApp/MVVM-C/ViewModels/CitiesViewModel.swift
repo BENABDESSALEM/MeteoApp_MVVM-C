@@ -10,11 +10,12 @@ import Foundation
 final class CitiesViewModel {
     
     // MARK: - Bindable Constants.
-    let citiesList: Bindable<[CityWeather]> = Bindable([])
+    let citiesList: Bindable<[SCityWeather]> = Bindable([])
     let showList: Bindable<Bool> = Bindable(false)
 
     // MARK: Initialisation.
     init() {
+        getPersistedCities()
         checkData()
     }
     /*
@@ -22,5 +23,10 @@ final class CitiesViewModel {
      */
     func checkData() {
         showList.value = citiesList.value.count != 0
+    }
+    
+    func getPersistedCities() {
+        let pCities = CoreDataManager.shared.getCities()
+        citiesList.value = pCities
     }
 }

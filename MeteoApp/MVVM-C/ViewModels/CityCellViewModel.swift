@@ -26,7 +26,7 @@ final class CityCellViewModel {
     }
    
     // MARK: Initialisation.
-    init(city:CityWeather) {
-        cityName.value = city.city
+    init(city:SCityWeather) {
+        cityName.value = city.name
     }
 }
