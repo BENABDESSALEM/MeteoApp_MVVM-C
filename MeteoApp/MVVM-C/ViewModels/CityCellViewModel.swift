@@ -29,4 +29,9 @@ final class CityCellViewModel {
     init(city:SCityWeather) {
         cityName.value = city.name
     }
+    
+    init(city:CityWeather) {
+        cityName.value = city.city
+    }
 }
+
