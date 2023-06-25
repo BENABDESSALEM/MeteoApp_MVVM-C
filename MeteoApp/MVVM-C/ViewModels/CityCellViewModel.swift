@@ -9,7 +9,7 @@ import Foundation
 
 final class CityCellViewModel {
     
-    // MARK: - Constants.
+    // MARK: - Bindable Constants.
     let temperature: Bindable<String?> = Bindable("")
     let tempMinMax: Bindable<String?> = Bindable("")
     let cityName: Bindable<String?> = Bindable("")

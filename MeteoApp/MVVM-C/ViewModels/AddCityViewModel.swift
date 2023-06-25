@@ -10,7 +10,7 @@ import MeteoAPI
 
 final class AddCityViewModel {
     
-    // MARK: Constants.
+    // MARK: - Bindable Constants.
     let results: Bindable<[CityWeather]> = Bindable([])
     let error: Bindable<String?> = Bindable(nil)
     let isButtonEnabled: Bindable<Bool> = Bindable(false)
@@ -25,7 +25,7 @@ final class AddCityViewModel {
         }
     }
     
-    // MARK: Init.
+    // MARK: Initialisation.
     init(apiService:MeteoService) {
         self.meteoApi = apiService
     }
@@ -89,11 +89,6 @@ extension AddCityViewModel {
     func isCharactersReached() -> Bool {
         guard let searchText = searchText else { return false }
         return searchText.count >= 3
-    }
-    
-    func getListBy(date:Date) -> [List] {
-        let nList:[List] = []
-        return nList
     }
 }
 
