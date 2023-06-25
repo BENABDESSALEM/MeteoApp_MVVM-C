@@ -1,6 +1,6 @@
 # MeteoApp
 
-MeteoApp is a app that use a MeteoAPI Swift Package Module written in Swift 5.
+I created an network layer called MeteoAPI is a Swift Package Module written in Swift 5.
 
 ### Requirements:
 iOS 11.0+
