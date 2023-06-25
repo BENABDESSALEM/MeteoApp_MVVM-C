@@ -45,6 +45,7 @@ class CoreDataManager {
                 weatherItem.image = weather.image
                 weatherItem.desc = weather.description
                 weatherItem.windSpeed = weather.windSpeed
+                weatherItem.date = weather.date
                 city.addToWeather(weatherItem)
             }
         }
