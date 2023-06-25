@@ -65,6 +65,12 @@ final class AddCityViewModel {
 // MARK: Methods.
 extension AddCityViewModel {
     /*
+     Save the city in CoreData.
+     */
+    func saveCity(city:CityWeather) {
+        CoreDataManager.shared.saveCity(weather: city)
+    }
+    /*
      Setup the displayed list of cities.
      */
     func setupAddedCity(weather:WeatherResponse) {
