@@ -104,7 +104,7 @@ extension AddCityViewController:UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let city = viewModel.results.value[indexPath.row]
-        viewModel.saveCity(city: city)
+        viewModel.saveOrUpdateCity(city: city)
         coordinator?.showCitiesFromAddCity()
     }
 }
