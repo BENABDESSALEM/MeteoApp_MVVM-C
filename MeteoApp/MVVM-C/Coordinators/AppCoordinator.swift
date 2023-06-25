@@ -53,9 +53,11 @@ class AppCoordinator: Coordinator {
     /*
      Navigate to the DetailsViewController
      */
-    func showDetail() {
+    func showDetail(city:CityWeather) {
         let vc = DetailsViewController()
+        let vm = DetailsViewModel(city: city)
         vc.coordinator = self
+        vc.viewModel = vm
         navigationController.pushViewController(vc, animated: true)
     }
     /*
