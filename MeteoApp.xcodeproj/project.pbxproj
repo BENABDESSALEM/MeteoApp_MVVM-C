@@ -18,12 +18,10 @@
 		DB750E492A421DF900E4B07C /* MeteoAPI in Frameworks */ = {isa = PBXBuildFile; productRef = DB750E482A421DF900E4B07C /* MeteoAPI */; };
 		DB750E4B2A42368C00E4B07C /* MeteoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E4A2A42368C00E4B07C /* MeteoService.swift */; };
 		DB750E4F2A42371600E4B07C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E4E2A42371600E4B07C /* Constants.swift */; };
-		DB750E582A4237D100E4B07C /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E512A4237CF00E4B07C /* Weather.swift */; };
-		DB750E592A4237D100E4B07C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E522A4237D000E4B07C /* Location.swift */; };
+		DB750E582A4237D100E4B07C /* CityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E512A4237CF00E4B07C /* CityResponse.swift */; };
+		DB750E592A4237D100E4B07C /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E522A4237D000E4B07C /* Coord.swift */; };
 		DB750E5A2A4237D100E4B07C /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E532A4237D000E4B07C /* Wind.swift */; };
-		DB750E5B2A4237D100E4B07C /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E542A4237D000E4B07C /* Clouds.swift */; };
 		DB750E5C2A4237D100E4B07C /* WeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E552A4237D000E4B07C /* WeatherDetails.swift */; };
-		DB750E5D2A4237D100E4B07C /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E562A4237D000E4B07C /* Sys.swift */; };
 		DB750E5E2A4237D100E4B07C /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E572A4237D100E4B07C /* Main.swift */; };
 		DB750E642A423AAD00E4B07C /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E632A423AAD00E4B07C /* AddCityViewModel.swift */; };
 		DB750E692A42417E00E4B07C /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E672A42417E00E4B07C /* CityTableViewCell.swift */; };
@@ -34,6 +32,8 @@
 		DB750E742A42F38900E4B07C /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E732A42F38900E4B07C /* UIViewController+extension.swift */; };
 		DB750E762A42F58400E4B07C /* UIActivityIndicatorView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E752A42F58400E4B07C /* UIActivityIndicatorView+extension.swift */; };
 		DB750E782A42F86700E4B07C /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB750E772A42F86700E4B07C /* UIButton+extension.swift */; };
+		DB7F331C2A4792750039D086 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7F331B2A4792750039D086 /* WeatherResponse.swift */; };
+		DB7F331E2A484D340039D086 /* WeatherItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7F331D2A484D340039D086 /* WeatherItem.swift */; };
 		DBF295C52A434957009C77A1 /* CityCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C42A434957009C77A1 /* CityCellViewModel.swift */; };
 		DBF295C72A434AAF009C77A1 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C62A434AAF009C77A1 /* UILabel+extension.swift */; };
 		DBF295C92A434C88009C77A1 /* CityWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF295C82A434C88009C77A1 /* CityWeather.swift */; };
@@ -87,12 +87,10 @@
 		DB750E462A421D6D00E4B07C /* MeteoAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = MeteoAPI; sourceTree = "<group>"; };
 		DB750E4A2A42368C00E4B07C /* MeteoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeteoService.swift; sourceTree = "<group>"; };
 		DB750E4E2A42371600E4B07C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DB750E512A4237CF00E4B07C /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
-		DB750E522A4237D000E4B07C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		DB750E512A4237CF00E4B07C /* CityResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityResponse.swift; sourceTree = "<group>"; };
+		DB750E522A4237D000E4B07C /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
 		DB750E532A4237D000E4B07C /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
-		DB750E542A4237D000E4B07C /* Clouds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
 		DB750E552A4237D000E4B07C /* WeatherDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDetails.swift; sourceTree = "<group>"; };
-		DB750E562A4237D000E4B07C /* Sys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
 		DB750E572A4237D100E4B07C /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		DB750E632A423AAD00E4B07C /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 		DB750E672A42417E00E4B07C /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
@@ -103,6 +101,8 @@
 		DB750E732A42F38900E4B07C /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		DB750E752A42F58400E4B07C /* UIActivityIndicatorView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+extension.swift"; sourceTree = "<group>"; };
 		DB750E772A42F86700E4B07C /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
+		DB7F331B2A4792750039D086 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		DB7F331D2A484D340039D086 /* WeatherItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItem.swift; sourceTree = "<group>"; };
 		DBF295C42A434957009C77A1 /* CityCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCellViewModel.swift; sourceTree = "<group>"; };
 		DBF295C62A434AAF009C77A1 /* UILabel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
 		DBF295C82A434C88009C77A1 /* CityWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeather.swift; sourceTree = "<group>"; };
@@ -240,14 +240,14 @@
 		DB750E502A42377000E4B07C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DB750E542A4237D000E4B07C /* Clouds.swift */,
-				DB750E522A4237D000E4B07C /* Location.swift */,
+				DB750E522A4237D000E4B07C /* Coord.swift */,
 				DB750E572A4237D100E4B07C /* Main.swift */,
-				DB750E562A4237D000E4B07C /* Sys.swift */,
-				DB750E512A4237CF00E4B07C /* Weather.swift */,
 				DB750E552A4237D000E4B07C /* WeatherDetails.swift */,
 				DB750E532A4237D000E4B07C /* Wind.swift */,
+				DB750E512A4237CF00E4B07C /* CityResponse.swift */,
+				DB7F331B2A4792750039D086 /* WeatherResponse.swift */,
 				DBF295C82A434C88009C77A1 /* CityWeather.swift */,
+				DB7F331D2A484D340039D086 /* WeatherItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -497,13 +497,14 @@
 				DB750E5C2A4237D100E4B07C /* WeatherDetails.swift in Sources */,
 				DB750E1B2A420E2C00E4B07C /* MeteoApp.xcdatamodeld in Sources */,
 				DB750E6D2A42452B00E4B07C /* UITableView+extension.swift in Sources */,
+				DB7F331E2A484D340039D086 /* WeatherItem.swift in Sources */,
 				DBF295DE2A44902B009C77A1 /* CitiesViewController.swift in Sources */,
 				DB750E762A42F58400E4B07C /* UIActivityIndicatorView+extension.swift in Sources */,
 				DB750E692A42417E00E4B07C /* CityTableViewCell.swift in Sources */,
 				DB750E4B2A42368C00E4B07C /* MeteoService.swift in Sources */,
 				DB750E5A2A4237D100E4B07C /* Wind.swift in Sources */,
 				DB750E5E2A4237D100E4B07C /* Main.swift in Sources */,
-				DB750E592A4237D100E4B07C /* Location.swift in Sources */,
+				DB750E592A4237D100E4B07C /* Coord.swift in Sources */,
 				DB750E452A4215B300E4B07C /* Bindable.swift in Sources */,
 				DBF295C92A434C88009C77A1 /* CityWeather.swift in Sources */,
 				DB750E112A420E2C00E4B07C /* AppDelegate.swift in Sources */,
@@ -517,13 +518,12 @@
 				DB750E702A42F10800E4B07C /* UIView+extension.swift in Sources */,
 				DBF295E42A44EC99009C77A1 /* AppCoordinator.swift in Sources */,
 				DBF295CB2A446223009C77A1 /* UIImageView+extension.swift in Sources */,
-				DB750E582A4237D100E4B07C /* Weather.swift in Sources */,
+				DB750E582A4237D100E4B07C /* CityResponse.swift in Sources */,
+				DB7F331C2A4792750039D086 /* WeatherResponse.swift in Sources */,
 				DBF295C52A434957009C77A1 /* CityCellViewModel.swift in Sources */,
 				DBF295F62A471ADC009C77A1 /* WeekCollectionViewCell.swift in Sources */,
 				DBF295C72A434AAF009C77A1 /* UILabel+extension.swift in Sources */,
 				DBF295F92A473ED7009C77A1 /* WeekCellViewModel.swift in Sources */,
-				DB750E5B2A4237D100E4B07C /* Clouds.swift in Sources */,
-				DB750E5D2A4237D100E4B07C /* Sys.swift in Sources */,
 				DBF295F02A46FCFB009C77A1 /* DetailsViewModel.swift in Sources */,
 				DBF295FE2A47431E009C77A1 /* AddCityViewController.swift in Sources */,
 				DB750E642A423AAD00E4B07C /* AddCityViewModel.swift in Sources */,

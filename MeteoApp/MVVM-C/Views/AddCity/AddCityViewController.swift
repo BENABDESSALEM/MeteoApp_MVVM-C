@@ -39,7 +39,7 @@ class AddCityViewController: UIViewController {
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
-        viewModel.getCityWeather()
+        viewModel.getCity()
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -112,7 +112,7 @@ extension AddCityViewController:UITableViewDelegate {
 
 extension AddCityViewController:UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        viewModel.getCityWeather()
+        viewModel.getCity()
         return true
     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

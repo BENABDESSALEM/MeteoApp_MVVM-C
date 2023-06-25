@@ -3,4 +3,99 @@
    uuid = "2E97EA97-A21D-4B0A-B6F9-708BAEC3BEF4"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEC0E85B-FA6A-4F65-93E7-A4C9615317D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeteoApp/MVVM-C/ViewModels/AddCityViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getCityWeather(lat:lon:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DEC0E85B-FA6A-4F65-93E7-A4C9615317D2 - 8ccfda99e5d8c3f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MeteoAPI.ApiResult&lt;MeteoApp.WeatherDetailsResponse&gt;) -&gt; () in MeteoApp.AddCityViewModel.getCityWeather(lat: Swift.String, lon: Swift.String) -&gt; ()"
+                  moduleName = "MeteoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajihbenabdessalem/Desktop/PSA/MeteoApp/MeteoApp/MVVM-C/ViewModels/AddCityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  uuid = "DEC0E85B-FA6A-4F65-93E7-A4C9615317D2 - 9d57b3cbe9619a4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MeteoAPI.ApiResult&lt;MeteoApp.WeatherResponse&gt;) -&gt; () in MeteoApp.AddCityViewModel.getCityWeather(lat: Swift.String, lon: Swift.String) -&gt; ()"
+                  moduleName = "MeteoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajihbenabdessalem/Desktop/PSA/MeteoApp/MeteoApp/MVVM-C/ViewModels/AddCityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "445">
+               </Location>
+               <Location
+                  uuid = "DEC0E85B-FA6A-4F65-93E7-A4C9615317D2 - 9d57b3cbe9619a4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MeteoAPI.ApiResult&lt;MeteoApp.WeatherResponse&gt;) -&gt; () in MeteoApp.AddCityViewModel.getCityWeather(lat: Swift.String, lon: Swift.String) -&gt; ()"
+                  moduleName = "MeteoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajihbenabdessalem/Desktop/PSA/MeteoApp/MeteoApp/MVVM-C/ViewModels/AddCityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "206">
+               </Location>
+               <Location
+                  uuid = "DEC0E85B-FA6A-4F65-93E7-A4C9615317D2 - 9d57b3cbe9619a4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MeteoAPI.ApiResult&lt;MeteoApp.WeatherResponse&gt;) -&gt; () in MeteoApp.AddCityViewModel.getCityWeather(lat: Swift.String, lon: Swift.String) -&gt; ()"
+                  moduleName = "MeteoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajihbenabdessalem/Desktop/PSA/MeteoApp/MeteoApp/MVVM-C/ViewModels/AddCityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "191">
+               </Location>
+               <Location
+                  uuid = "DEC0E85B-FA6A-4F65-93E7-A4C9615317D2 - 9d57b3cbe961a590"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MeteoAPI.ApiResult&lt;MeteoApp.WeatherResponse&gt;) -&gt; () in MeteoApp.AddCityViewModel.getCityWeather(lat: Swift.String, lon: Swift.String) -&gt; ()"
+                  moduleName = "MeteoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wajihbenabdessalem/Desktop/PSA/MeteoApp/MeteoApp/MVVM-C/ViewModels/AddCityViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "191">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
