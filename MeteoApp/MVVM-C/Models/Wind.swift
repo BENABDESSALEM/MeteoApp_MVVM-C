@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - Wind
+
 public struct Wind: Codable {
     public let speed: Double
     public let deg: Double?
@@ -15,6 +17,8 @@ public struct Wind: Codable {
         return Direction(deg: deg).rawValue
     }
 }
+
+// MARK: - Enum Direction
 
 enum Direction: String {
     case north = "N"
@@ -45,5 +49,4 @@ enum Direction: String {
             self = .northWest
         }
     }
-
 }

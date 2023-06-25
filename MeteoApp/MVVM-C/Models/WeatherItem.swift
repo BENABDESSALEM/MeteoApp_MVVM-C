@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - WeatherItem
+
 struct WeatherItem {
     let temp:String?
     let description:String?

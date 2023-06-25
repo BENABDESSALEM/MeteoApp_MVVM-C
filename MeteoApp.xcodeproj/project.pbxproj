@@ -278,11 +278,11 @@
 		DB750E612A42394F00E4B07C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DBF295FA2A474044009C77A1 /* CitiesViewModel.swift */,
 				DB750E632A423AAD00E4B07C /* AddCityViewModel.swift */,
 				DBF295C42A434957009C77A1 /* CityCellViewModel.swift */,
 				DBF295EF2A46FCFB009C77A1 /* DetailsViewModel.swift */,
 				DBF295F82A473ED7009C77A1 /* WeekCellViewModel.swift */,
-				DBF295FA2A474044009C77A1 /* CitiesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";

@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - CityWeather
+
 struct CityWeather {
     let city:String?
     let country:String?

@@ -33,7 +33,7 @@ public struct List: Codable {
         case dtTxt = "dt_txt"
     }
 }
-
+// MARK: - Description
 enum Description: String, Codable {
     case brokenClouds = "broken clouds"
     case clearSky = "clear sky"
@@ -49,6 +49,8 @@ enum MainEnum: String, Codable {
     case rain = "Rain"
 }
 
+// MARK: - Extension of WeatherResponse.
+
 extension WeatherResponse {
     var name:String {
         return self.city.name
@@ -57,6 +59,8 @@ extension WeatherResponse {
         return self.city.country
     }
 }
+
+// MARK: - Extension of List.
 
 extension List {
     var image:String {
