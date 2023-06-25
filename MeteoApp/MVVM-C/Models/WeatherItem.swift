@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct WeatherItem {
+    let temp:String?
+    let description:String?
+    let tempMinMax:String?
+    let image:String?
+    let windSpeed:String?
+    let date:Date?
+}

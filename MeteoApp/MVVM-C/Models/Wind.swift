@@ -8,7 +8,7 @@
 import Foundation
 
 public struct Wind: Codable {
-    public let speed: Double?
+    public let speed: Double
     public let deg: Double?
     var direction: String? {
         guard let deg = deg else { return nil }

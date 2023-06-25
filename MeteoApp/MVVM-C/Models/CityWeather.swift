@@ -8,9 +8,7 @@
 import Foundation
 
 struct CityWeather {
-    let temp:String?
-    let tempMinMax:String?
     let city:String?
-    let status:String?
-    let image:String?
+    let country:String?
+    let list:[WeatherItem]?
 }

@@ -1,5 +1,5 @@
 //
-//  City.swift
+//  CityResponse.swift
 //  MeteoApp
 //
 //  Created by Wajih Benabdessalem on 6/20/23.
@@ -7,13 +7,13 @@
 
 import Foundation
 
-public struct City: Codable {
+public struct CityResponse: Codable {
     public let id: Int
     public let name: String?
-    public let coord: Location?
+    public let coord: Coord?
 }
 
-extension City {
+extension CityResponse {
     var lat:String {
         return "\(self.coord?.lat ?? 0)"
     }

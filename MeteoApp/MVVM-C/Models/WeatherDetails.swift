@@ -7,9 +7,10 @@
 
 import Foundation
 
-public struct WeatherDetails: Codable {
-    public let id: Int?
-    public let main: String?
-    public let description: String?
-    public let icon: String?
+// MARK: - Weather
+struct WeatherDetails: Codable {
+    let id: Int
+    let main: MainEnum
+    let description: String
+    let icon: String
 }
