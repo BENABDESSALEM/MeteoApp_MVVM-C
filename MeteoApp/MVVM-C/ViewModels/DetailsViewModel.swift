@@ -16,29 +16,29 @@ final class DetailsViewModel {
     let averageTemp: Bindable<String?> = Bindable(nil)
     let windSpeed: Bindable<String?> = Bindable(nil)
     let weatherImage: Bindable<String?> = Bindable(nil)
-    let weatherList: Bindable<[WeatherItem]> = Bindable([])
+    let weatherList: Bindable<[SWeatherItem]> = Bindable([])
 
-    let city:CityWeather!
+    let city:SCityWeather!
     
     // MARK: Variable.
-    var list:[WeatherItem] = []
+    var list:[SWeatherItem] = []
     
     // MARK: Proprety observer.
-    var weather:WeatherItem? {
+    var weather:SWeatherItem? {
         didSet {
-            cityName.value = city.city
+            cityName.value = city.name
             temp.value = weather?.temp
             description.value = weather?.description
-            averageTemp.value = weather?.tempMinMax
+            averageTemp.value = weather?.average
             weatherImage.value = weather?.image
             windSpeed.value = weather?.windSpeed
         }
     }
 
     // MARK: Initialisation.
-    init(city: CityWeather!) {
+    init(city: SCityWeather!) {
         self.city = city
-        self.list = city.list ?? []
+        self.list = city.weather?.allObjects as! [SWeatherItem]
         self.weatherList.value = self.list
         getTodayWeather()
     }
@@ -54,4 +54,10 @@ final class DetailsViewModel {
             weather = list.first
         }
     }
+}
+extension NSSet {
+  func toArray<T>() -> [T] {
+    let array = self.map({ $0 as! T})
+    return array
+  }
 }
