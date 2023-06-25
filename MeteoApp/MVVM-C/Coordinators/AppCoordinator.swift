@@ -42,10 +42,9 @@ class AppCoordinator: Coordinator {
     /*
      Navigate to the CitiesViewController from after adding a city
      */
-    func showCities(city:CityWeather) {
+    func showCitiesFromAddCity() {
         let vc = navigationController.viewControllers.filter { $0 is CitiesViewController }.first! as! CitiesViewController
         let vm = CitiesViewModel()
-        vm.citiesList.value.append(city)
         vc.coordinator = self
         vc.viewModel = vm
         navigationController.popToViewController(vc, animated: true)
@@ -53,11 +52,11 @@ class AppCoordinator: Coordinator {
     /*
      Navigate to the DetailsViewController
      */
-    func showDetail(city:CityWeather) {
+    func showDetail(city:SCityWeather) {
         let vc = DetailsViewController()
-        let vm = DetailsViewModel(city: city)
-        vc.coordinator = self
-        vc.viewModel = vm
+       // let vm = DetailsViewModel(city: city)
+      //  vc.coordinator = self
+       // vc.viewModel = vm
         navigationController.pushViewController(vc, animated: true)
     }
     /*

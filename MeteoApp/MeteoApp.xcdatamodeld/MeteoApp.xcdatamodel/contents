@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22F66" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="SCity" representedClassName="SCity" syncable="YES">
+    <entity name="SCityWeather" representedClassName="SCityWeather" syncable="YES">
         <attribute name="country" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="weather" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SWeather" inverseName="city" inverseEntity="SWeather"/>
+        <relationship name="weather" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SWeatherItem" inverseName="city" inverseEntity="SWeatherItem"/>
     </entity>
-    <entity name="SWeather" representedClassName="SWeather" syncable="YES">
+    <entity name="SWeatherItem" representedClassName="SWeatherItem" syncable="YES">
         <attribute name="average" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String"/>
         <attribute name="temp" optional="YES" attributeType="String"/>
         <attribute name="windSpeed" optional="YES" attributeType="String"/>
-        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SCity" inverseName="weather" inverseEntity="SCity"/>
+        <relationship name="city" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SCityWeather" inverseName="weather" inverseEntity="SCityWeather"/>
     </entity>
 </model>
