@@ -67,7 +67,12 @@ extension DetailsViewController {
      Setup bindings.
      */
     func setupBindings() {
-
+        cityNameLabel.bindTo(viewModel.cityName)
+        tempLabel.bindTo(viewModel.temp)
+        statusLabel.bindTo(viewModel.description)
+        averageTempLabel.bindTo(viewModel.averageTemp)
+        windSpeedLabel.bindTo(viewModel.windSpeed)
+        weatherImgView.bindTo(viewModel.weatherImage)
     }
 }
 

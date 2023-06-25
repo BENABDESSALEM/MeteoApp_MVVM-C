@@ -27,9 +27,6 @@ final class CityCellViewModel {
    
     // MARK: Initialisation.
     init(city:CityWeather) {
-        temperature.value = city.temp
-        tempMinMax.value = city.tempMinMax
         cityName.value = city.city
-        status.value = city.status
     }
 }
