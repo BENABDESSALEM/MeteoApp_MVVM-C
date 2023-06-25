@@ -1,5 +1,5 @@
 //
-//  SCity+CoreDataProperties.swift
+//  SCityWeather+CoreDataProperties.swift
 //  MeteoApp
 //
 //  Created by Wajih Benabdessalem on 6/25/23.
@@ -10,26 +10,26 @@ import Foundation
 import CoreData
 
 
-extension SCity {
+extension SCityWeather {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<SCity> {
-        return NSFetchRequest<SCity>(entityName: "SCity")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<SCityWeather> {
+        return NSFetchRequest<SCityWeather>(entityName: "SCityWeather")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var country: String?
+    @NSManaged public var name: String?
     @NSManaged public var weather: NSSet?
 
 }
 
 // MARK: Generated accessors for weather
-extension SCity {
+extension SCityWeather {
 
     @objc(addWeatherObject:)
-    @NSManaged public func addToWeather(_ value: SWeather)
+    @NSManaged public func addToWeather(_ value: SWeatherItem)
 
     @objc(removeWeatherObject:)
-    @NSManaged public func removeFromWeather(_ value: SWeather)
+    @NSManaged public func removeFromWeather(_ value: SWeatherItem)
 
     @objc(addWeather:)
     @NSManaged public func addToWeather(_ values: NSSet)

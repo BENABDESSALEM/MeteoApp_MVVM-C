@@ -33,29 +33,29 @@ class CoreDataManager {
         }
     }
     
-    func city(name: String, country: String) -> SCity {
-      let city = SCity(context: container.viewContext)
-      city.name = name
-      city.country = country
-      return city
+    func saveCity(weather:CityWeather) {
+        let city = SCityWeather(context: context)
+        city.name = weather.city
+        city.country = weather.country
+        if let list = weather.list {
+            for weather in list {
+                let weatherItem = SWeatherItem(context: context)
+                weatherItem.temp = weather.temp
+                weatherItem.average = weather.tempMinMax
+                weatherItem.image = weather.image
+                weatherItem.desc = weather.description
+                weatherItem.windSpeed = weather.windSpeed
+                city.addToWeather(weatherItem)
+            }
+        }
+        save()
     }
     
-    func cityWeather(temp: String, average: String, desc:String, image:String, windSpeed:String, date: Date, city: SCity) -> SWeather {
-      let weather = SWeather(context: container.viewContext)
-      weather.temp = temp
-      weather.average = average
-      weather.image = image
-      weather.desc = desc
-      weather.windSpeed = windSpeed
-      city.addToWeather(weather)
-      return weather
-    }
-    
-    func getCities() -> [SCity] {
-      let request: NSFetchRequest<SCity> = SCity.fetchRequest()
-      var fetchedCities: [SCity] = []
+    func getCities() -> [SCityWeather] {
+      let request: NSFetchRequest<SCityWeather> = SCityWeather.fetchRequest()
+      var fetchedCities: [SCityWeather] = []
       do {
-          fetchedCities = try container.viewContext.fetch(request)
+          fetchedCities = try context.fetch(request)
       } catch let error {
          print("Error fetching singers \(error)")
       }
