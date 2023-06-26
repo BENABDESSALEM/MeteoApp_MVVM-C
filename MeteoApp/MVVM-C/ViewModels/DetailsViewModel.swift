@@ -28,7 +28,7 @@ final class DetailsViewModel {
         didSet {
             cityName.value = city.name
             temp.value = weather?.temp
-            description.value = weather?.description
+            description.value = weather?.desc
             averageTemp.value = weather?.average
             weatherImage.value = weather?.image
             windSpeed.value = weather?.windSpeed
