@@ -24,7 +24,9 @@ final class CitiesViewModel {
     func checkData() {
         showList.value = citiesList.value.count != 0
     }
-    
+    /*
+     Get the persisted cities from CoreData.
+     */
     func getPersistedCities() {
         let pCities = CoreDataManager.shared.getCities()
         citiesList.value = pCities
