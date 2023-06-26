@@ -13,7 +13,7 @@ final class WeekCellViewModel {
     let dayName: Bindable<String?> = Bindable("")
     let temp: Bindable<String?> = Bindable("")
     let weatherImage: Bindable<String?> = Bindable("")
-
+    
     // MARK: Initialisation.
     init(item:SWeatherItem) {
         let formatter = DateFormatter()

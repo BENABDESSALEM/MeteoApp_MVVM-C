@@ -22,6 +22,7 @@ final class DetailsViewController: UIViewController {
     var viewModel: DetailsViewModel!
     weak var coordinator: AppCoordinator?
     var gradientLayer = CAGradientLayer()
+    var selectedIndexDay = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +89,7 @@ extension DetailsViewController:UICollectionViewDataSource {
         let item = viewModel.weatherList.value[indexPath.row]
         let vm = WeekCellViewModel(item: item)
         cell.setupWith(viewModel: vm)
+        cell.setupBackground(index1: indexPath.row, index2: selectedIndexDay)
         return cell
     }
 }
@@ -97,7 +99,9 @@ extension DetailsViewController:UICollectionViewDataSource {
 extension DetailsViewController:UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let dayWeather = viewModel.weatherList.value[indexPath.row]
+        selectedIndexDay = indexPath.row
         viewModel.weather = dayWeather
+        collectionView.reloadData()
     }
 }
 
