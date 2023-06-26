@@ -39,6 +39,14 @@ class WeekCollectionViewCell: UICollectionViewCell {
         self.viewModel = viewModel
     }
     
+    func setupBackground(index1:Int,index2:Int) {
+        if index1 != index2 {
+            containerView.setBackgroundGradient(gradientLayer: gradientLayer, colors: buttonColors, isVertical: true)
+        } else {
+            containerView.setBackgroundGradient(gradientLayer: gradientLayer, colors: appColors, isVertical: true)
+        }
+    }
+    
     func setupBindings() {
         dayLabel.bindTo(viewModel.dayName)
         weatherImgView.bindTo(viewModel.weatherImage)
