@@ -24,7 +24,7 @@ class CoreDataManager {
         }
         context = container.viewContext
     }
-
+    
     func save() {
         do {
             try context.save()
@@ -32,22 +32,19 @@ class CoreDataManager {
             print("Error saving Core Data. \(error)")
         }
     }
-    
+}
+
+// MARK: Methods.
+
+extension CoreDataManager {
     func saveAndUpdateCity(weather:CityWeather) {
-        let city: SCityWeather!
         /*
          Before saving the data we will check if the city already exist:
-            - IF true : so we will update the model
-            - if false: so the city no saved ans is new so we will add it.
+         - IF true : so we will update the model
+         - if false: so the city no saved ans is new so we will add it.
          */
-        let fetchCity: NSFetchRequest<SCityWeather> = SCityWeather.fetchRequest()
-        fetchCity.predicate = NSPredicate(format: "name = %@", (weather.city ?? "") as String)
-        let results = try? context.fetch(fetchCity)
-        if results?.count == 0 {
-           city = SCityWeather(context: context)
-        } else {
-           city = results?.first
-        }
+        deleteCity(name: weather.city ?? "")
+        let city = SCityWeather(context: context)
         city.name = weather.city
         city.country = weather.country
         if let list = weather.list {
@@ -65,14 +62,24 @@ class CoreDataManager {
         save()
     }
     
+    func deleteCity(name:String) {
+        let fetchCity: NSFetchRequest<SCityWeather> = SCityWeather.fetchRequest()
+        fetchCity.predicate = NSPredicate(format: "name = %@", name)
+        let results = try? context.fetch(fetchCity)
+        for cityObj in results! { // Fetching Object
+            context.delete(cityObj) // Deleting Object
+        }
+        save()
+    }
+    
     func getCities() -> [SCityWeather] {
-      let request: NSFetchRequest<SCityWeather> = SCityWeather.fetchRequest()
-      var fetchedCities: [SCityWeather] = []
-      do {
-          fetchedCities = try context.fetch(request)
-      } catch let error {
-         print("Error fetching singers \(error)")
-      }
-      return fetchedCities
+        let request: NSFetchRequest<SCityWeather> = SCityWeather.fetchRequest()
+        var fetchedCities: [SCityWeather] = []
+        do {
+            fetchedCities = try context.fetch(request)
+        } catch let error {
+            print("Error fetching singers \(error)")
+        }
+        return fetchedCities
     }
 }
